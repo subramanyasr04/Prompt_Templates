@@ -18,141 +18,129 @@ Each prompt enforces:
 
 ## 📂 Repository Structure
 
-```text
-├── Code Generation Template.md
-├── Code refactor.md
-├── Documentation Generation.md
-├── Error and Bug fix.md
-├── Generate Unit Test suite.md
-└── README.md
-🧠 Templates Included
-1. ⚙️ Code Generation Template
-Generate production-ready code with:
+> 📄 Code Generation Template.md
+> 📄 Code refactor.md
+> 📄 Documentation Generation.md
+> 📄 Error and Bug fix.md
+> 📄 Generate Unit Test suite.md
+> 📄 README.md
 
-Architecture planning
+---
 
-Clean structure
+## 🧠 Templates Included
 
-Security & scalability considerations
+### 1. ⚙️ Code Generation Template
+Generate **production-ready code** with:
+* Architecture planning
+* Clean structure
+* Security & scalability considerations
 
-2. 🔧 Code Refactoring
+### 2. 🔧 Code Refactoring
 Improve existing code by:
+* Removing code smells
+* Enhancing readability
+* Optimizing performance
 
-Removing code smells
-
-Enhancing readability
-
-Optimizing performance
-
-3. 🐞 Error & Bug Fixing
+### 3. 🐞 Error & Bug Fixing
 Debug like a senior engineer:
+* Root cause analysis
+* Compare expected vs actual output
+* Full code rewrite with fixes
 
-Root cause analysis
+### 4. 🧪 Unit Test Generation
+Create **robust test suites**:
+* Edge cases
+* Negative testing
+* High coverage (90%+)
 
-Compare expected vs actual output
-
-Full code rewrite with fixes
-
-4. 🧪 Unit Test Generation
-Create robust test suites:
-
-Edge cases
-
-Negative testing
-
-High coverage (90%+)
-
-5. 📚 Documentation Generation
+### 5. 📚 Documentation Generation
 Generate clean documentation:
+* Architecture explanation
+* Code walkthrough
+* Setup & usage guides
 
-Architecture explanation
+---
 
-Code walkthrough
+## 🎯 Why This Repo?
 
-Setup & usage guides
-
-🎯 Why This Repo?
 Most developers use prompts like:
-
-"Fix this code"
+> *"Fix this code"*
 
 This repo upgrades that to:
+> **Think → Analyze → Design → Implement → Validate**
 
-Think → Analyze → Design → Implement → Validate
+👉 Result: **2x–5x better output quality**
 
-👉 Result: 2x–5x better output quality
+---
 
-🛠️ How to Use
-Pick a template based on your need.
+## 🛠️ How to Use
 
-Replace the bracketed placeholders:
+1. Pick a template based on your need.
+2. Replace the bracketed placeholders:
+   * `[TECH_STACK]`
+   * `<code_to_refactor>` or `<code_to_fix>`
+   * `[Objective]`
+3. Paste into your preferred LLM.
+4. Get structured, high-quality output.
 
-[TECH_STACK]
+---
 
-<code_to_refactor> or <code_to_fix>
+## 💡 Example Use Case
 
-[Objective]
+**Instead of:**
+> *"Fix this Python code"*
 
-Paste into your preferred LLM.
+**Use:**
+> *(The Error and Bug fix.md template)*
 
-Get structured, high-quality output.
+**👉 You’ll get:**
+* Root cause analysis
+* Clean rewritten code
+* Test cases
+* Future bug prevention strategies
 
-💡 Example Use Case
-Instead of:
+---
 
-"Fix this Python code"
+## 🔥 Who Is This For?
 
-Use:
+* Software Engineers 👨‍💻
+* AI/GenAI Developers 🤖
+* Students preparing for coding interviews 📚
+* Content creators building tech tutorials 🎥
 
-(The Error and Bug fix.md template)
+---
 
-👉 You’ll get:
+## 🚀 Future Enhancements
 
-Root cause analysis
+* 🔹 System Design Prompt Templates
+* 🔹 RAG & GenAI Prompt Templates
+* 🔹 Code Review (PR-style) Prompts
+* 🔹 AI Agent Prompting Framework
 
-Clean rewritten code
+---
 
-Test cases
+## 🤝 Contributing
 
-Future bug prevention strategies
-
-🔥 Who Is This For?
-Software Engineers 👨‍💻
-
-AI/GenAI Developers 🤖
-
-Students preparing for coding interviews 📚
-
-Content creators building tech tutorials 🎥
-
-🚀 Future Enhancements
-🔹 System Design Prompt Templates
-
-🔹 RAG & GenAI Prompt Templates
-
-🔹 Code Review (PR-style) Prompts
-
-🔹 AI Agent Prompting Framework
-
-🤝 Contributing
 Feel free to:
+* Add new templates
+* Improve existing prompts
+* Share real-world use cases via pull requests
 
-Add new templates
+---
 
-Improve existing prompts
+## ⭐ Support
 
-Share real-world use cases via pull requests
-
-⭐ Support
 If you find this toolkit useful:
+* ⭐ **Star this repo**
+* 🔁 Share it with fellow developers
+* 💡 Use it in your daily workflow
 
-⭐ Star this repo
+---
 
-🔁 Share it with fellow developers
+## 🧠 Key Principle
 
-💡 Use it in your daily workflow
+> **Better prompts → Better thinking → Better code**
 
-🧠 Key Principle
-Better prompts → Better thinking → Better code
+---
 
-Built for developers who want to think like senior engineers using AI. 🚀 Happy Coding & Prompt Engineering!
+Built for developers who want to **think like senior engineers using AI**. 🚀 Happy Coding & Prompt Engineering!
