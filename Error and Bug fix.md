@@ -1,101 +1,91 @@
-# 🧪 Unit Test Generation Prompt Template (Production-Level)
+# 🐞 Bug Fixing Prompt Template (Production-Level)
 
-This prompt template helps generate **comprehensive, high-quality unit tests** like a senior QA/SDET engineer — covering edge cases, robustness, and real-world scenarios. 
-It forces the LLM to follow the AAA (Arrange, Act, Assert) pattern, think through failure paths, and analyze code testability before writing a single line of test code.
-
+This prompt template helps generate **complete bug fixes with root cause analysis and full code rewrite** — like a senior software engineer handling production issues. It forces the LLM to diagnose the root cause and handle missing edge cases before generating the fully corrected, production-ready code.
 ---
 
 ## 🧠 The Prompt Template
 
 Copy and paste the text below into your LLM. Fill out the bracketed variables `[LIKE THIS]` before hitting send.
-
 ````
-You are a senior software engineer and testing expert with deep expertise in [TECH_STACK].
-Your task is to generate comprehensive, production-quality unit tests for the given code.
+You are a senior software engineer and debugging expert with deep expertise in [TECH_STACK].
+Your task is to analyze the given code, identify all bugs, explain the root causes, and rewrite the entire code correctly so that it meets the expected behavior.
 ---
 
-### Step 1: Understand Before Writing Tests (MANDATORY)
-Before writing any tests, you must:
-1. Analyze what the code does.
-2. Identify inputs, outputs, and behavior.
-3. Determine edge cases and failure scenarios.
-
----
-### Objective
-[Explain what the code/module is supposed to do, e.g., "Processes payment transactions and updates the database"]
----
-
-### Technical Requirements
-* **Language:** [e.g., Python, Java, JavaScript]
-* **Testing Framework:** [e.g., Pytest, JUnit, Jest]
+### Step 1: Understand Before Fixing (MANDATORY)
+Before making changes, you must:
+1. Analyze what the code is intended to do.
+2. Compare the expected output vs. the current output.
+3. Identify ALL issues (not just the visible error).
 
 ---
 
-### Code Under Test
-<code_under_test>
-[PASTE YOUR CODE HERE]
-</code_under_test>
+### 🎯 Objective
+[Explain briefly what the code is supposed to do]
 
 ---
 
-### Test Generation Goals
+### 🧩 Context & Code
+<code_to_fix>
+[PASTE YOUR BROKEN CODE HERE]
+</code_to_fix>
 
-**Functional Testing**
-* Cover all core functionalities.
-* Validate expected outputs for valid inputs.
+<current_output>
+[Paste the error message, stack trace, or incorrect output here]
+</current_output>
 
-**Edge Cases**
-* Empty inputs.
-* Null/None values.
-* Boundary conditions.
-* Invalid inputs.
-
-**Negative Testing**
-* Error handling scenarios.
-* Exceptions and failure paths.
-
-**Performance (Optional)**
-* Identify heavy operations and test limits.
+<expected_output>
+[Explain or paste what the code SHOULD produce instead]
+</expected_output>
 
 ---
 
-### Best Practices to Apply
-* Use clear, descriptive test naming conventions.
-* Strictly follow the AAA pattern (Arrange → Act → Assert).
-* Keep tests completely independent and isolated.
-* Use mocks/stubs for external dependencies (DBs, APIs) where required.
-* Avoid hardcoding values where possible; use factories or fixtures.
+### 🔍 Debugging Goals
+
+**Root Cause Analysis**
+* Identify all types of issues: Syntax errors, logical errors, runtime errors, data handling issues.
+* Clearly explain WHY each issue occurs.
+
+**Code Fixing**
+* Rewrite the FULL code (do not provide partial fixes or snippets).
+* Ensure a clean, modular, and production-ready implementation.
+* Preserve the intended core functionality.
+
+**Error Handling & Edge Cases**
+* Add proper validation and error handling.
+* Identify and handle missing edge cases.
+---
+
+### 🛡️ Best Practices
+* Follow clean code principles (SOLID, DRY).
+* Use meaningful variable/function names.
+* Keep code readable and maintainable.
+* Add comments where necessary to explain complex fixes.
 
 ---
 
-### Coverage Requirements
-* Ensure high test coverage (aim for 90%+).
-* Cover both success (happy path) and failure scenarios.
----
-
-### Constraints
-* Do NOT modify the original code being tested.
-* Do NOT skip edge cases.
-* Do NOT write redundant or overlapping tests.
+### 🚫 Constraints
+* Do NOT provide partial fixes; output the entire fixed file.
+* Do NOT skip the root cause explanation.
+* Do NOT assume missing details without stating your assumptions clearly.
 
 ---
 
-### Extra Instructions
-* If assumptions about the code's environment are needed, state them clearly.
-* Prefer clarity and maintainability over cleverness or complex setup.
-* Use parameterized tests where applicable to test multiple inputs cleanly.
-* **Code Testability Analysis:** Identify untestable parts of the provided code (e.g., hidden dependencies, lack of dependency injection) and suggest structural improvements to make it more testable.
+### ✨ Extra Instructions
+* If multiple approaches exist to fix the bug, choose the most reliable and maintainable one.
+* Keep explanations simple and clear.
+* Think like a senior engineer fixing production code.
+* **Proactive Prevention:** Identify potential hidden bugs that haven't surfaced yet and suggest how to prevent them in the future.
 
 ---
 
-### Output Format
+### 📂 Output Format
 Please format your response exactly as follows:
 
-1. ** Test Strategy:** (Brief explanation of your approach and what you plan to mock)
-2. ** Testability Feedback:** (Identify untestable parts and suggest structural improvements)
-3. ** Test Cases List:** (Bullet points of the scenarios covered)
-4. ** Complete Test Code:** (The full, copy-pasteable test file)
-5. ** How to Run Tests:** (Command to execute the tests)
-6. ** Coverage Notes:** (Optional notes on what is covered vs. what might need integration tests)
+1. **🧾 Summary of Issues Found:** (Brief overview of the bugs)
+2. **🔍 Root Cause Explanation:** (Detailed breakdown of WHY the code failed)
+3. **🚧 Hidden Bugs & Prevention:** (Analysis of potential future issues)
+4. **🔧 Fully Rewritten Code:** (Complete, clean, and correct code)
+5. **🚀 Improvements Made:** (Bullet points detailing what was changed and why)
+6. **🧪 Suggested Test Cases:** (To verify the correctness of the fix)
 
-Now generate the unit tests step-by-step like a senior engineer.
+Now analyze step-by-step and fix the code completely.
