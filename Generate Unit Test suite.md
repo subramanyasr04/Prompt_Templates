@@ -10,7 +10,7 @@ It forces the LLM to follow the AAA (Arrange, Act, Assert) pattern, think throug
 
 Copy and paste the text below into your LLM. Fill out the bracketed variables `[LIKE THIS]` before hitting send.
 
-````text
+```text
 You are a senior software engineer and testing expert with deep expertise in [TECH_STACK].
 
 Your task is to generate comprehensive, production-quality unit tests for the given code.
@@ -105,3 +105,12 @@ Please format your response exactly as follows:
 6. **📊 Coverage Notes:** (Optional notes on what is covered vs. what might need integration tests)
 
 Now generate the unit tests step-by-step like a senior engineer.
+```
+
+---
+
+## 📌 Usage Tips
+
+* **Isolate the Code:** Feed the LLM one logical module or class at a time for the highest quality tests. 
+* **Provide Context:** If the code relies on complex internal data structures, paste a quick JSON example or schema alongside the code so the LLM can mock it accurately.
+* **Combine with Refactoring:** Since this prompt now automatically identifies untestable parts of your code, run that feedback back through your refactoring prompt to fix the architecture before finalizing your tests!
