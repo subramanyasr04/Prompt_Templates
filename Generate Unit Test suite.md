@@ -1,6 +1,7 @@
 # 🧪 Unit Test Generation Prompt Template (Production-Level)
 
 This prompt template helps generate **comprehensive, high-quality unit tests** like a senior QA/SDET engineer — covering edge cases, robustness, and real-world scenarios. 
+
 It forces the LLM to follow the AAA (Arrange, Act, Assert) pattern, think through failure paths, and analyze code testability before writing a single line of test code.
 
 ---
@@ -9,13 +10,14 @@ It forces the LLM to follow the AAA (Arrange, Act, Assert) pattern, think throug
 
 Copy and paste the text below into your LLM. Fill out the bracketed variables `[LIKE THIS]` before hitting send.
 
-````
+````text
 You are a senior software engineer and testing expert with deep expertise in [TECH_STACK].
+
 Your task is to generate comprehensive, production-quality unit tests for the given code.
 
 ---
 
-### Step 1: Understand Before Writing Tests (MANDATORY)
+### 🧠 Step 1: Understand Before Writing Tests (MANDATORY)
 Before writing any tests, you must:
 1. Analyze what the code does.
 2. Identify inputs, outputs, and behavior.
@@ -23,25 +25,25 @@ Before writing any tests, you must:
 
 ---
 
-### Objective
+### 🎯 Objective
 [Explain what the code/module is supposed to do, e.g., "Processes payment transactions and updates the database"]
 
 ---
 
-### Technical Requirements
+### ⚙️ Technical Requirements
 * **Language:** [e.g., Python, Java, JavaScript]
 * **Testing Framework:** [e.g., Pytest, JUnit, Jest]
 
 ---
 
-### Code Under Test
+### 🧩 Code Under Test
 <code_under_test>
 [PASTE YOUR CODE HERE]
 </code_under_test>
 
 ---
 
-### Test Generation Goals
+### 🔍 Test Generation Goals
 
 **Functional Testing**
 * Cover all core functionalities.
@@ -62,7 +64,7 @@ Before writing any tests, you must:
 
 ---
 
-### Best Practices to Apply
+### 🛡️ Best Practices to Apply
 * Use clear, descriptive test naming conventions.
 * Strictly follow the AAA pattern (Arrange → Act → Assert).
 * Keep tests completely independent and isolated.
@@ -71,20 +73,20 @@ Before writing any tests, you must:
 
 ---
 
-### Coverage Requirements
+### 🧪 Coverage Requirements
 * Ensure high test coverage (aim for 90%+).
 * Cover both success (happy path) and failure scenarios.
 
 ---
 
-### Constraints
+### 🚫 Constraints
 * Do NOT modify the original code being tested.
 * Do NOT skip edge cases.
 * Do NOT write redundant or overlapping tests.
 
 ---
 
-### Extra Instructions
+### ✨ Extra Instructions
 * If assumptions about the code's environment are needed, state them clearly.
 * Prefer clarity and maintainability over cleverness or complex setup.
 * Use parameterized tests where applicable to test multiple inputs cleanly.
@@ -92,14 +94,14 @@ Before writing any tests, you must:
 
 ---
 
-### Output Format
+### 📂 Output Format
 Please format your response exactly as follows:
 
-1. ** Test Strategy:** (Brief explanation of your approach and what you plan to mock)
-2. ** Testability Feedback:** (Identify untestable parts and suggest structural improvements)
-3. ** Test Cases List:** (Bullet points of the scenarios covered)
-4. ** Complete Test Code:** (The full, copy-pasteable test file)
-5. ** How to Run Tests:** (Command to execute the tests)
-6. ** Coverage Notes:** (Optional notes on what is covered vs. what might need integration tests)
+1. **🧾 Test Strategy:** (Brief explanation of your approach and what you plan to mock)
+2. **🚧 Testability Feedback:** (Identify untestable parts and suggest structural improvements)
+3. **🧪 Test Cases List:** (Bullet points of the scenarios covered)
+4. **🔧 Complete Test Code:** (The full, copy-pasteable test file)
+5. **🚀 How to Run Tests:** (Command to execute the tests)
+6. **📊 Coverage Notes:** (Optional notes on what is covered vs. what might need integration tests)
 
 Now generate the unit tests step-by-step like a senior engineer.
